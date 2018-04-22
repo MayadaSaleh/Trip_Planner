@@ -1,0 +1,268 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#202030"
+    >
+
+    <android.support.v4.widget.NestedScrollView
+        android:id="@+id/myScroll"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scrollbars="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/placeImg"
+                android:layout_width="200dp"
+                android:layout_height="200dp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="20dp"
+                android:scaleType="fitXY" />
+
+
+
+            <EditText
+                android:id="@+id/trip_name_et"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/placeImg"
+                android:textColor="#ffffff"
+                android:textColorHint="#8c8484"
+                android:hint="@string/Name" />
+
+            <EditText
+                android:id="@+id/trip_start_et"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:textColorHint="#8c8484"
+                android:layout_below="@id/trip_name_et"
+                android:hint="@string/startPoint"
+                android:singleLine="true"
+                android:textColor="#ffffff"
+                />
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/myStarRecycler"
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:background="@drawable/recycler_bg"
+                android:layout_below="@id/trip_start_et"
+                android:layout_marginTop="10dp"
+                android:scrollbars="vertical"
+                android:visibility="gone"/>
+
+            <EditText
+                android:id="@+id/trip_end_et"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/myStarRecycler"
+                android:hint="@string/endPoint"
+                android:singleLine="true"
+                android:textColor="#ffffff"
+                android:textColorHint="#8c8484" />
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/myEndRecycler"
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:background="@drawable/recycler_bg"
+                android:layout_below="@id/trip_end_et"
+                android:layout_marginTop="10dp"
+                android:scrollbars="vertical"
+                android:visibility="gone"/>
+
+
+            <EditText
+                android:id="@+id/trip_notes_et"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:textColor="#ffffff"
+                android:textColorHint="#8c8484"
+                android:layout_below="@id/myEndRecycler"
+                android:hint="@string/notes" />
+
+            <Button
+                android:id="@+id/add_note"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="addNotesFn"
+                android:layout_alignParentRight="true"
+                android:text="@string/add_notes"
+                android:layout_below="@id/myEndRecycler"
+                android:textColor="#ffffff"
+                android:background="@drawable/btn_bg"
+                android:textAllCaps="false" />
+
+            <Button
+                android:id="@+id/pick_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="pickDate"
+                android:layout_below="@id/add_note"
+                android:layout_alignParentRight="true"
+                android:text="@string/pickDate"
+                android:textColor="#ffffff"
+                android:background="@drawable/btn_bg"
+                android:textAllCaps="false" />
+
+            <Button
+                android:id="@+id/pick_time_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="pickTime"
+                android:layout_below="@id/pick_btn"
+                android:layout_alignParentRight="true"
+                android:text="@string/pickHour"
+                android:textColor="#ffffff"
+                android:background="@drawable/btn_bg"
+                android:textAllCaps="false" />
+
+            <TextView
+                android:id="@+id/trip_date_et"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:textColor="#ffffff"
+                android:padding="10dp"
+                android:textSize="20sp"
+                android:layout_below="@id/trip_notes_et"
+                android:text="@string/Date" />
+
+            <TextView
+                android:id="@+id/trip_time_et"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:textSize="20sp"
+                android:textColor="#ffffff"
+                android:layout_below="@id/trip_date_et"
+                android:text="@string/Time" />
+
+
+
+            <TextView
+                android:id="@+id/trip_type_et"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:textColor="#ffffff"
+                android:padding="10dp"
+                android:textSize="20sp"
+                android:layout_below="@id/trip_time_et"
+                android:text="@string/type" />
+
+
+
+
+
+
+
+
+
+
+            <RadioGroup
+                android:id="@+id/trip_type_radioGroup"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/trip_type_et"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:id="@+id/oneWay"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:checked="true"
+                    android:onClick="onRadioButtonClicked"
+                    android:textColor="#ffffff"
+
+                    android:text="@string/oneWay" />
+
+                <RadioButton
+                    android:id="@+id/round"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:onClick="onRadioButtonClicked"
+                    android:textColor="#ffffff"
+
+                    android:text="@string/round" />
+
+            </RadioGroup>
+
+            <RelativeLayout
+                android:id="@+id/round_layout"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:layout_below="@+id/trip_type_radioGroup"
+                android:visibility="gone">
+
+                <TextView
+                    android:id="@+id/dateText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="10dp"
+                    android:padding="10dp"
+                    android:text="@string/returnDate"
+                    android:textColor="#ffffff" />
+
+                <Button
+                    android:id="@+id/pickReturnDate_btn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="20dp"
+                    android:onClick="pickDateRound"
+                    android:text="@string/pickDate"
+                    android:textColor="#ffffff"
+                    android:background="@drawable/btn_bg"
+
+                    android:textAllCaps="false" />
+
+                <TextView
+                    android:id="@+id/timeText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/dateText"
+                    android:layout_marginLeft="20dp"
+                    android:padding="10dp"
+                    android:text="@string/returnTime"
+
+                    android:textColor="#ffffff" />
+
+                <Button
+                    android:id="@+id/pickReturnTime_btn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_below="@id/pickReturnDate_btn"
+                    android:layout_marginRight="20dp"
+                    android:onClick="pickTimeRound"
+                    android:text="@string/pickHour"
+                    android:textColor="#ffffff"
+                    android:background="@drawable/btn_bg"
+                    android:textAllCaps="false" />
+
+            </RelativeLayout>
+
+
+            <Button
+                android:id="@+id/save_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/round_layout"
+                android:onClick="save_btn"
+                android:text="@string/save"
+                android:textAllCaps="false"
+                android:textColor="#ffffff"
+                android:background="@drawable/btn_bg"/>
+
+        </RelativeLayout>
+
+    </android.support.v4.widget.NestedScrollView>
+</RelativeLayout>

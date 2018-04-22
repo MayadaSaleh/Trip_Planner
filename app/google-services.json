@@ -1,0 +1,99 @@
+{
+  "project_info": {
+    "project_number": "880839876393",
+    "firebase_url": "https://secure-racer-162210.firebaseio.com",
+    "project_id": "secure-racer-162210",
+    "storage_bucket": "secure-racer-162210.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:880839876393:android:b6539c5c3af10eae",
+        "android_client_info": {
+          "package_name": "com.example.heshamadawy.googlemapfinaltest"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "880839876393-oc9etv243jpmqb7fchs7vibr5ivp87fd.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.heshamadawy.googlemapfinaltest",
+            "certificate_hash": "fa7388e1f914af27ff7cc8dec9e70f02b01dc5d5"
+          }
+        },
+        {
+          "client_id": "880839876393-4oev14tan9o6o7748sn9jbavjann6f1g.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC8fWup3NWBXApxmQHHreSI2u5RJ4j2XPs"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "880839876393-4oev14tan9o6o7748sn9jbavjann6f1g.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:880839876393:android:d0d53e2ce712260c",
+        "android_client_info": {
+          "package_name": "mobile.and.web.iti.navigationdrawer"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "880839876393-0o331rbb7kslr9n0isad54ftahq1k1lm.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "mobile.and.web.iti.navigationdrawer",
+            "certificate_hash": "78ca337efeeeaad872a5ea9dcc09c52ee22f22bb"
+          }
+        },
+        {
+          "client_id": "880839876393-4oev14tan9o6o7748sn9jbavjann6f1g.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC8fWup3NWBXApxmQHHreSI2u5RJ4j2XPs"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "880839876393-4oev14tan9o6o7748sn9jbavjann6f1g.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,171 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/RadioGp"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_horizontal"
+    android:visibility="visible"
+    android:background="#202030"
+    tools:context="mobile.and.web.iti.navigationdrawer.login.register.RegisterActivity">
+
+
+    <TextView
+        android:id="@+id/Name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/edtFname"
+        android:layout_alignBottom="@+id/edtFname"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:text="@string/First_Name"
+        android:textColor="#ffffff" />
+
+    <EditText
+        android:id="@+id/edtFname"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/edtLname"
+        android:layout_alignParentTop="true"
+        android:textColor="#ffffff"
+        android:layout_alignStart="@+id/edtLname"
+        android:ems="10"
+        android:inputType="textPersonName" />
+
+    <TextView
+        android:id="@+id/Last_Name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/edtLname"
+        android:layout_alignBottom="@+id/edtLname"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:text="@string/Last_Name"
+        android:textColor="#ffffff" />
+
+    <EditText
+        android:id="@+id/edtLname"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#ffffff"
+        android:layout_alignLeft="@+id/edtPass"
+        android:layout_alignStart="@+id/edtPass"
+        android:layout_below="@+id/edtFname"
+        android:layout_marginTop="22dp"
+        android:ems="10"
+        android:inputType="textPersonName" />
+
+    <EditText
+        android:id="@+id/edtPass"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/cofPass"
+        android:layout_alignStart="@+id/cofPass"
+        android:layout_below="@+id/edtLname"
+        android:textColor="#ffffff"
+        android:layout_marginTop="25dp"
+        android:ems="10"
+        android:inputType="textPassword" />
+
+    <TextView
+        android:id="@+id/Password"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/edtPass"
+        android:layout_alignBottom="@+id/edtPass"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:text="@string/Password"
+        android:textColor="#ffffff" />
+
+    <EditText
+        android:id="@+id/cofPass"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/edtPass"
+        android:layout_marginLeft="12dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="26dp"
+        android:textColor="#ffffff"
+        android:layout_toEndOf="@+id/Confirm_Password"
+        android:layout_toRightOf="@+id/Confirm_Password"
+        android:ems="10"
+        android:inputType="textPassword" />
+
+    <TextView
+        android:id="@+id/Confirm_Password"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/cofPass"
+        android:layout_alignBottom="@+id/cofPass"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:text="@string/Confirm_Password"
+        android:textColor="#ffffff" />
+
+    <EditText
+        android:id="@+id/edtMail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/cofPass"
+        android:layout_alignRight="@+id/cofPass"
+        android:layout_below="@+id/cofPass"
+        android:textColor="#ffffff"
+        android:layout_marginTop="40dp"
+        android:ems="10"
+        android:inputType="textEmailAddress" />
+
+    <TextView
+        android:id="@+id/Email"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/edtMail"
+        android:layout_alignBottom="@+id/edtMail"
+        android:layout_alignEnd="@+id/Password"
+        android:layout_alignRight="@+id/Password"
+        android:text="@string/Email"
+        android:textColor="#ffffff" />
+
+    <Button
+        android:id="@+id/Register"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/edtMail"
+        android:layout_alignRight="@+id/edtMail"
+        android:layout_below="@+id/radioGroup"
+        android:layout_marginEnd="62dp"
+        android:layout_marginRight="62dp"
+        android:layout_marginTop="18dp"
+        android:text="@string/Register"
+        android:textColor="#ffffff"
+        android:background="@drawable/btn_bg" />
+
+
+    <RadioGroup
+        android:id="@+id/radioGroup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/Confirm_Password"
+        android:layout_alignRight="@+id/Confirm_Password"
+        android:layout_below="@+id/edtMail"
+        android:layout_marginTop="40dp"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:id="@+id/male"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="onRadioButtonClicked"
+            android:text="@string/male"
+            android:textColor="#ffffff" />
+
+        <RadioButton
+            android:id="@+id/female"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="onRadioButtonClicked"
+            android:text="@string/female"
+            android:textColor="#ffffff" />
+    </RadioGroup>
+
+</RelativeLayout>

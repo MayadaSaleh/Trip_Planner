@@ -226,6 +226,7 @@ public class AddTripActivity extends AppCompatActivity implements DatePickerDial
                                 dialog.dismiss();
                                 emptyViews();
                                 startActivity(new Intent(AddTripActivity.this, MainActivity.class));
+                                finish();
                             }else{
                                 Toast.makeText(AddTripActivity.this, "trip time and date should be in future", Toast.LENGTH_SHORT).show();
                             }
@@ -902,6 +903,7 @@ public class AddTripActivity extends AppCompatActivity implements DatePickerDial
                 dialog.dismiss();
                 Intent intent = new Intent(AddTripActivity.this, MainActivity.class);
                 startActivity(intent);
+                finish();
 
 
             } else {

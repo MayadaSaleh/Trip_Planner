@@ -2,10 +2,8 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://C:\Users\Mayada\Documents\GitHub\Trip_Planner\NavigationDrawer.iml" filepath="C:\Users\Mayada\Documents\GitHub\Trip_Planner\NavigationDrawer.iml" />
-      <module fileurl="file://$PROJECT_DIR$/Trip_Planner.iml" filepath="$PROJECT_DIR$/Trip_Planner.iml" />
+      <module fileurl="file://$PROJECT_DIR$/NavigationDrawer.iml" filepath="$PROJECT_DIR$/NavigationDrawer.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
-      <module fileurl="file://C:\Users\Mayada\Documents\GitHub\Trip_Planner\app\app.iml" filepath="C:\Users\Mayada\Documents\GitHub\Trip_Planner\app\app.iml" />
     </modules>
   </component>
 </project>

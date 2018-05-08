@@ -222,6 +222,7 @@ public class Login extends AppCompatActivity {
                                 intent.putExtra("id", user.getUid());
                     sharePrefencesFacebook (user.getUid() ,  object );
                     startActivity(intent);
+                    finish();
 
 
 
@@ -271,6 +272,7 @@ public class Login extends AppCompatActivity {
                             sharePrefencesEmailAndPassword(user.getUid() , email  );
                             dialog.dismiss();
                             startActivity(intent);
+                            finish();
 
                         } else {
                             // If sign in fails, display a message to the user.
